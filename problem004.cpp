@@ -5,7 +5,7 @@ int main() {
     std::string numAsString;
     bool isPalindrom;
     int num;
-    int greatestNum;
+    int greatestNum = 0;
     for (int i = 100; i < 1000; i++) {
         for (int j = 100; j < 1000; j++) {
             isPalindrom = true;
