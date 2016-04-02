@@ -10,7 +10,7 @@ int main() {
         tmp = fib2;
         fib2 = fib1 + fib2;
         fib1 = tmp;
-        std::cout << "fib1 = " << fib1 << std::endl;
+        //std::cout << "fib1 = " << fib1 << std::endl;
         if (fib1 % 2 == 0) {
             sum += fib1;
         }
