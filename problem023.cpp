@@ -45,20 +45,22 @@ void Abundant<T>::print_abundant_nums() {
 
 template <typename T>
 bool Abundant<T>::is_sum_of_abundant_nums(T num) {
-    for (uint64_t i = 0; num < this->abundant_V[i]; i++) {
-        for (uint64_t j = 0; num < this->abundant_V[j]; j++) {
-            if (j + i == num) {
-                std::cout << "j = " << j << " i = " << i << " num = " << num << std::endl;
+    for (uint64_t i = 0; i < abundant_V.size(); i++) {
+        for (uint64_t j = 0; j < abundant_V.size(); j++) {
+            if (abundant_V[j] + abundant_V[i] == num) {
+                //std::cout << (abundant_V[j] + abundant_V[i] == num) << std::endl;
+                //std::cout << "abundant_V[j] = " << abundant_V[j] 
+                         //<< " abundant_V[i] = " << abundant_V[i] << " num = " << num << std::endl;
                 return true;
             }
         }
     }
-    std::cout << num << std::endl;
     return false;
 }
 
 int main() {
     const int MAX_LIM = 28124;
+    //const int MAX_LIM = 100000;
     Abundant<uint64_t> a;
     a.find_abundant_nums(12, MAX_LIM);
     //a.print_abundant_nums();
@@ -74,11 +76,12 @@ int main() {
     // the sum of two numbers from the abundant vector
     uint64_t total = 0;
     for (uint64_t j = 0; j < MAX_LIM + 2; j++) {
-        if (a.is_sum_of_abundant_nums(j)) {
-            std::cout << j << std::endl;
+        if (!a.is_sum_of_abundant_nums(j)) {
+            //std::cout << j << std::endl;
             total += j;
         }
     }
-    std::cout << total << std::endl;
+    // total sum: 4179871
+    std::cout << "total sum: " << total << std::endl;
     return 0;
 }

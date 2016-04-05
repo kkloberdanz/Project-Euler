@@ -11,4 +11,6 @@ all:
 	g++ problem010.cpp -o p10 -O2 -std=gnu++11
 	g++ problem011.cpp -o p11 -O2 -std=gnu++11
 	g++ problem012.cpp -o p12 -O2 -std=gnu++11
+	g++ problem021.cpp -o p21 -O2 -std=gnu++11
 	g++ Problem022/problem022.cpp -o p22 -O2 -std=gnu++11
+	g++ problem023.cpp -o p23 -O2 -std=gnu++11

@@ -2,6 +2,10 @@
 //#include <cmath>
 #include <cstdint>
 
+/*
+ * total = 14321950368
+ */
+
 template <typename T>
 T d(T num) {
     T total = 0;
@@ -15,7 +19,7 @@ T d(T num) {
 
 template <typename T>
 bool is_amicable_pair(T a, T b) {
-    return (d(a) == d(b));
+    return (d(a) == b) && (d(b) == a);
 }
 
 int main() {
